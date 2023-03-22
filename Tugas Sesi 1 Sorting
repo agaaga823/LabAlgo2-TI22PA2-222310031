@@ -1,0 +1,147 @@
+    BUBBLESORT
+#include <iostream>
+using namespace std;
+void bubblesort(int arr[], int n){
+  int i,j,temp;
+for(i = 0; i < n; i++){
+for (j = 0; j < n - i - 1; j++){
+  if (arr[j] < arr[j + 1]){
+    temp = arr[j];
+    arr[j] = arr[j + 1];
+    arr[j + 1] = temp;
+    }
+  }
+  }
+  }
+int main(){
+  int array[100], n, i, j;
+  cout << "Masukkan banyak elemen: ";
+  cin >> n;
+  cout << "Masukkan nilai: \n";
+  for (i = 0; i < n; i++){
+    cin >> array[i];
+    }
+  bubblesort(array, n);
+  cout << "Hasil pengurutan dengan algoritma bubblesort:\n";
+  for (i = 0; i < n; i++){
+    cout << array[i] << " ";
+    }
+  cout << "\n";
+  }
+  
+  
+  INSERTION SORT
+#include <iostream>
+using namespace std;
+int main(){
+  int y;
+  cout<<"masukan banyak array:";
+  cin>>y;
+  int x[y];
+  for(int i=0; i<y; i++){
+    cout<<"masukan angka ke "<<i<<" :";
+    cin>>x[i];
+    cout<<endl;
+    }
+  for(int i=1; i<y; i++){
+    int key = x[i];
+    int j = i-1;
+    while(j>=0 && x[j] < key){
+      x[j+1] = x[j];
+      j--;
+      }
+    x[j+1] = key;
+    cout<<"proses sorting"<<endl;
+    for(int m=0;m<y;m++){
+      cout<<x[m]<<" ";
+      }
+    cout<<endl;
+    }
+  cout<<"hasil akhir"<<endl;
+  for(int m=0;m<y;m++){
+    cout<<x[m]<<" ";
+    }
+  }
+  
+  
+    SELECTION SORT  
+#include <iostream>
+using namespace std;
+void selectionsort(int arr[], int n){
+  int i,j,minIndex,temp;
+  for(i=0; i<n-1; i++){
+    minIndex = i;
+    for (j = i+1; j < n; j++) {
+      if(arr[j] > arr[minIndex]){
+        minIndex = j;
+  }
+}
+temp = arr[minIndex];
+arr[minIndex] = arr[i];
+arr[i] = temp;
+cout << "Iterasi ke - " << i+1 << " :";
+for(int k=0; k<n; k++){
+  cout << arr[k] << " ";
+  }
+    cout << endl;
+    }
+  }
+int main(){
+  int n,i;
+cout << "Masukkan nilai elemen : ";
+cin >> n;
+int arr[n];
+cout << "Masukkan nilai elemen : ";
+for(int i=0; i<n; i++){
+  cin >> arr[i];
+}
+cout << "Data sebelum sorting : ";
+for(i=0; i<n; i++){
+  cout << arr[i] << " ";
+}
+cout << endl;
+selectionsort(arr,n);
+cout << "Data setelah sorting : ";
+for(i=0; i<n; i++){
+  cout << arr[i] << " ";
+  }
+  return 0;
+  }
+  
+  
+  
+  
+TUGAS 2 PERPUSTAKAAN  
+#include <iostream>
+using namespace std;
+int main(){
+  int y;
+  cout<<"masukan banyak buku:";
+  cin>>y;
+  string x[y];
+  for(int i=0; i<y; i++){
+    cout<<"masukan buku ke "<<i<<" :";
+    cin>>x[i];
+    cout<<endl;
+    }
+  for(int i=1; i<y; i++){
+    string key = x[i];
+    int j = i-1;
+    while(j>=0 && x[j] > key){
+      x[j+1] = x[j];
+      j--;
+      }
+    x[j+1] = key;
+    cout<<"Urutannya"<<endl;
+    for(int m=0;m<y;m++){
+      cout<<x[m]<<" ";
+      }
+    cout<<endl;
+    }
+  cout<<"hasil akhir"<<endl;
+  for(int m=0;m<y;m++){
+    cout<<x[m]<<" ";
+    }
+  }
+  
+  
